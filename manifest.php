@@ -14,23 +14,38 @@ $manifest = array(
     'is_uninstallable' => true,
     'published_date' => '2023-03-28',
     'type' => 'module',
-    'version' => '0.0.2',
+    'version' => '0.1.1',
     'dependencies' => array(
       )
 );
 $installdefs = array(
     'id' => 'hs321_erp',
-    // 'copy' => array (
-    //     array (
-    //         'from' => '<basepath>/source/copy',
-    //         'to' => '.',
-    //     ),
-    // ),
+    'copy' => array (
+        array (
+            'from' => '<basepath>/source/copy',
+            'to' => '.',
+        ),
+    ),
     'vardefs'=>array(
         array (
             'from' => '<basepath>/source/vardefs/AOS_Products_Quotes/erp_vardefs.php',
             'to_module' => 'AOS_Products_Quotes',
 	    ),
+        array (
+            'from' => '<basepath>/source/vardefs/AOS_Products/erp_vardefs.php',
+            'to_module' => 'AOS_Products',
+	    ),
+    ),
+    'logic_hooks' => array(
+        array(
+          'module' => 'AOS_Products_Quotes',
+          'hook' => 'before_save',
+          'order' => 100,
+          'description'  => 'Recalculating fact and plan remains for Quotes Positions',
+          'file' => 'custom/modules/AOS_Products_Quotes/RecalculateRemainsHook.php',
+          'class' => 'RecalculateRemainsHook',
+          'function' => 'before_save',
+        ),
     ),
     'language'=> array (
         array(
@@ -62,6 +77,16 @@ $installdefs = array(
             'from'=> '<basepath>/source/language/modules/AOS_Quotes/en_us.lang.php',
             'to_module'=> 'AOS_Quotes',
             'language'=>'en_us'
-        ),        
+        ),
+        array(
+            'from'=> '<basepath>/source/language/modules/AOS_Products/ru_ru.lang.php',
+            'to_module'=> 'AOS_Products',
+            'language'=>'ru_ru'
+        ),
+        array(
+            'from'=> '<basepath>/source/language/modules/AOS_Products/en_us.lang.php',
+            'to_module'=> 'AOS_Products',
+            'language'=>'en_us'
+        ),
     ),
 );
