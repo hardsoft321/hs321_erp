@@ -12,9 +12,9 @@ $manifest = array(
     'author' => 'Leon.V.Nikitin (nlv@lab321.com)',
     'description' => 'Добавление ERP функционала в SuiteCRM',
     'is_uninstallable' => true,
-    'published_date' => '2023-03-29',
+    'published_date' => '2023-03-30',
     'type' => 'module',
-    'version' => '0.2.2',
+    'version' => '0.3.0',
     'dependencies' => array(
       )
 );
@@ -45,6 +45,12 @@ $installdefs = array(
           'file' => 'custom/modules/AOS_Products_Quotes/RecalculateRemainsHook.php',
           'class' => 'RecalculateRemainsHook',
           'function' => 'before_save',
+        ),
+    ),
+    'action_file_map' => array(
+        array(
+            'from' => '<basepath>/source/action_file_map/RecalculatePlanRemains.php',
+            'to_module' => 'AOS_Products',
         ),
     ),
     'language'=> array (
