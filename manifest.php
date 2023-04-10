@@ -14,7 +14,7 @@ $manifest = array(
     'is_uninstallable' => true,
     'published_date' => '2023-04-05',
     'type' => 'module',
-    'version' => '0.4.1',
+    'version' => '0.5.0',
     'dependencies' => array(
       )
 );
