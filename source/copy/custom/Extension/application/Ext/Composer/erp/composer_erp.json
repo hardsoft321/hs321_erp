@@ -7,7 +7,7 @@
   "authors": [],
   "minimum-stability": "dev",
   "require": {
-    "box/spout": "3.3"
+    "box/spout": "2.7"
   }
 }
 

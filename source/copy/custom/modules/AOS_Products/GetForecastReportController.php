@@ -5,8 +5,8 @@
  * @package hs321_erp
  */
 
- use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
- use Box\Spout\Common\Entity\Row;
+use Box\Spout\Writer\WriterFactory;
+use Box\Spout\Common\Type;
 
 // require_once('include/formbase.php');
 
@@ -33,22 +33,22 @@ $filePath = "php://output";
 $res = RecalculateRemainsHook::getForecast($_REQUEST['product_id']);
 
 $cells = [
-  WriterEntityFactory::createCell('Ид продукта'),
-  WriterEntityFactory::createCell('Название продукта'),
-  WriterEntityFactory::createCell('Дата'),
-  // WriterEntityFactory::createCell('Прирост в день'),
-  WriterEntityFactory::createCell('Кол-во'),
+  'Ид продукта',
+  'Название продукта',
+  'Дата',
+  // 'Прирост в день',
+  'Кол-во',
 ];
-$rows = [WriterEntityFactory::createRow($cells)];
+$rows = [$cells];
 foreach ($res as $r) {
   $cells = [
-    WriterEntityFactory::createCell($r['product_id']),
-    WriterEntityFactory::createCell($r['product_name']),
-    WriterEntityFactory::createCell($r['accdate']),
-    // WriterEntityFactory::createCell($r['product_qty']),
-    WriterEntityFactory::createCell($r['running_product_qty']),
+    $r['product_id'],
+    $r['product_name'],
+    $r['accdate'],
+    // $r['product_qty'],
+    $r['running_product_qty'],
   ];
-  $rows[] = WriterEntityFactory::createRow($cells);
+  $rows[] = $cells;
 }
 
 $writer->openToFile($filePath);
