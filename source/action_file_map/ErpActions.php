@@ -7,3 +7,5 @@
 
 $action_file_map['recalculateplanremains'] = 'custom/modules/AOS_Products/RecalculatePlanRemainsController.php';
 $action_file_map['getforecastreport'] = 'custom/modules/AOS_Products/GetForecastReportController.php';
+$action_file_map['erpadmin'] = 'custom/modules/AOS_Products/ErpAdminController.php';
+

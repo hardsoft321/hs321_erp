@@ -12,9 +12,9 @@ $manifest = array(
     'author' => 'Leon.V.Nikitin (nlv@lab321.com)',
     'description' => 'Добавление ERP функционала в SuiteCRM',
     'is_uninstallable' => true,
-    'published_date' => '2023-04-10',
+    'published_date' => '2023-04-11',
     'type' => 'module',
-    'version' => '0.5.1',
+    'version' => '0.6.0',
     'dependencies' => array(
       )
 );
@@ -49,7 +49,7 @@ $installdefs = array(
     ),
     'action_file_map' => array(
         array(
-            'from' => '<basepath>/source/action_file_map/RecalculatePlanRemains.php',
+            'from' => '<basepath>/source/action_file_map/ErpActions.php',
             'to_module' => 'AOS_Products',
         ),
     ),
@@ -62,6 +62,16 @@ $installdefs = array(
         array(
             'from'=> '<basepath>/source/language/application/en_us.lang.php',
             'to_module'=> 'application',
+            'language'=>'en_us'
+        ),
+        array(
+            'from'=> '<basepath>/source/language/modules/Administration/ru_ru.lang.php',
+            'to_module'=> 'Administration',
+            'language'=>'ru_ru'
+        ),
+        array(
+            'from'=> '<basepath>/source/language/modules/Administration/en_us.lang.php',
+            'to_module'=> 'Administration',
             'language'=>'en_us'
         ),
         array(
