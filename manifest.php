@@ -14,7 +14,7 @@ $manifest = array(
     'is_uninstallable' => true,
     'published_date' => '2023-04-10',
     'type' => 'module',
-    'version' => '0.5.1',
+    'version' => '0.6.0',
     'dependencies' => array(
       )
 );
@@ -42,7 +42,7 @@ $installdefs = array(
           'hook' => 'before_save',
           'order' => 100,
           'description'  => 'Recalculating fact and plan remains for Quotes Positions',
-          'file' => 'custom/modules/AOS_Products_Quotes/RecalculateRemainsHook.php',
+          'file' => 'modules/AOS_ERP/RecalculateRemainsHook.php',
           'class' => 'RecalculateRemainsHook',
           'function' => 'before_save',
         ),
@@ -50,7 +50,7 @@ $installdefs = array(
     'action_file_map' => array(
         array(
             'from' => '<basepath>/source/action_file_map/RecalculatePlanRemains.php',
-            'to_module' => 'AOS_Products',
+            'to_module' => 'AOS_ERP',
         ),
     ),
     'language'=> array (
@@ -65,6 +65,16 @@ $installdefs = array(
             'language'=>'en_us'
         ),
         array(
+            'from'=> '<basepath>/source/language/modules/AOS_ERP/ru_ru.lang.php',
+            'to_module'=> 'AOS_ERP',
+            'language'=>'ru_ru'
+        ),
+        array(
+            'from'=> '<basepath>/source/language/modules/AOS_ERP/en_us.lang.php',
+            'to_module'=> 'AOS_ERP',
+            'language'=>'en_us'
+        ),
+        array(
             'from'=> '<basepath>/source/language/modules/AOS_Products_Quotes/ru_ru.lang.php',
             'to_module'=> 'AOS_Products_Quotes',
             'language'=>'ru_ru'
@@ -72,16 +82,6 @@ $installdefs = array(
         array(
             'from'=> '<basepath>/source/language/modules/AOS_Products_Quotes/en_us.lang.php',
             'to_module'=> 'AOS_Products_Quotes',
-            'language'=>'en_us'
-        ),
-        array(
-            'from'=> '<basepath>/source/language/modules/AOS_Quotes/ru_ru.lang.php',
-            'to_module'=> 'AOS_Quotes',
-            'language'=>'ru_ru'
-        ),
-        array(
-            'from'=> '<basepath>/source/language/modules/AOS_Quotes/en_us.lang.php',
-            'to_module'=> 'AOS_Quotes',
             'language'=>'en_us'
         ),
         array(
