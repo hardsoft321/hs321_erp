@@ -135,7 +135,7 @@
     $row['name'] = $payment_product['name'];
     $row['parent_type'] = 'AOS_Contracts';
     $row['product_cost_price'] = format_number($grand_total_price);
-    $row['product_list_price'] = format_number($grand_total_price);
+    $row['product_list_price'] = format_number(1);
     $row['product_discount'] = format_number(0);
     $row['product_discount_amount'] = format_number(0);
     $row['product_unit_price'] = format_number(1);

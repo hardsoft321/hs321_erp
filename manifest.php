@@ -14,7 +14,7 @@ $manifest = array(
     'is_uninstallable' => true,
     'published_date' => '2023-04-13',
     'type' => 'module',
-    'version' => '0.7.0.cissystem',
+    'version' => '0.7.1.cissystem',
     'dependencies' => array(
       )
 );
