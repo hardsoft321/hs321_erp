@@ -12,9 +12,9 @@ $manifest = array(
     'author' => 'Leon.V.Nikitin (nlv@lab321.com)',
     'description' => 'Добавление ERP функционала в SuiteCRM',
     'is_uninstallable' => true,
-    'published_date' => '2023-04-19',
+    'published_date' => '2023-04-20',
     'type' => 'module',
-    'version' => '0.7.3',
+    'version' => '0.8.0',
     'dependencies' => array(
       )
 );
@@ -30,6 +30,16 @@ $installdefs = array(
         array (
             'from' => '<basepath>/source/vardefs/AOS_Products_Quotes/erp_vardefs.php',
             'to_module' => 'AOS_Products_Quotes',
+	    ),
+        array (
+            'from' => '<basepath>/source/vardefs/AOS_Products/erp_vardefs.php',
+            'to_module' => 'AOS_Products',
+	    ),
+    ),
+    'menu'=>array(
+        array (
+            'from' => '<basepath>/source/menu/AOS_Products/erp_menu.php',
+            'to_module' => 'AOS_Products',
 	    ),
         array (
             'from' => '<basepath>/source/vardefs/AOS_Products/erp_vardefs.php',
