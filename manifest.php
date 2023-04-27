@@ -14,7 +14,7 @@ $manifest = array(
     'is_uninstallable' => true,
     'published_date' => '2023-04-27',
     'type' => 'module',
-    'version' => '0.10.0',
+    'version' => '0.11.0',
     'dependencies' => array(
       )
 );
@@ -30,16 +30,6 @@ $installdefs = array(
         array (
             'from' => '<basepath>/source/vardefs/AOS_Products_Quotes/erp_vardefs.php',
             'to_module' => 'AOS_Products_Quotes',
-	    ),
-        array (
-            'from' => '<basepath>/source/vardefs/AOS_Products/erp_vardefs.php',
-            'to_module' => 'AOS_Products',
-	    ),
-    ),
-    'menu'=>array(
-        array (
-            'from' => '<basepath>/source/menu/AOS_Products/erp_menu.php',
-            'to_module' => 'AOS_Products',
 	    ),
         array (
             'from' => '<basepath>/source/vardefs/AOS_Products/erp_vardefs.php',
@@ -104,5 +94,20 @@ $installdefs = array(
             'to_module'=> 'AOS_Products',
             'language'=>'en_us'
         ),
+        array(
+            'from' => '<basepath>/source/language/Administration/en_us.lang.php',
+            'to_module' => 'Administration',
+            'language' => 'en_us'
+        ),
+        array(
+            'from' => '<basepath>/source/language/Administration/ru_ru.lang.php',
+            'to_module' => 'Administration',
+            'language' => 'ru_ru'
+        ),
     ),
+    'administration' => array(
+        array(
+           'from' => '<basepath>/source/Administration/menu/erp_group_admin.php'
+        )
+    ),        
 );
