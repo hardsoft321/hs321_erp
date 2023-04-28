@@ -12,9 +12,9 @@ $manifest = array(
     'author' => 'Leon.V.Nikitin (nlv@lab321.com)',
     'description' => 'Добавление ERP функционала в SuiteCRM',
     'is_uninstallable' => true,
-    'published_date' => '2023-04-27',
+    'published_date' => '2023-04-28',
     'type' => 'module',
-    'version' => '0.11.1.cissystem',
+    'version' => '0.12.1.cissystem',
     'dependencies' => array(
       )
 );
